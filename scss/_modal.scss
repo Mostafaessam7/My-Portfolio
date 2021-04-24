@@ -1,0 +1,43 @@
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba($primary-color, 0.5);
+  z-index: 99999;
+  opacity: 0;
+  @include easeOut;
+  pointer-events: none;
+  &:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: auto 1rem;
+    font-size: 2rem;
+    color: rgba(set-text-color($primary-color), $background-opacity);
+    background: transparent;
+  }
+  .modalBody {
+    max-height: calc(100vh - 25vh);
+    overflow-y: auto;
+    width: 80%;
+    position: relative;
+    margin: 15vh auto;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    border: solid 0.2rem rgba($secondary-color, $background-opacity);
+    background: $primary-color;
+  }
+  .projectModalImage {
+    width: auto;
+    max-height: 50vh;
+
+    display: block;
+    margin: 1rem auto;
+  }
+}

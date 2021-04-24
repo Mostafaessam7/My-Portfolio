@@ -1,0 +1,72 @@
+// Partial scss file will have syntax '_name.scss' when using
+// @import just the 'name' will be needed.
+
+// variables
+$primary-color: #333;
+$light-text-color: #eee;
+$dark-text-color: #111;
+$secondary-color: #ffd700;
+$show-home-image: true;
+$home-image: url(../images/background.jpg);
+$proj1-bg-image: url(../images/projects/vscode-react-medium-screenshot.jpg);
+$background-opacity: 0.8;
+$modal-bg-opacity: 0.95;
+
+// functions / mixins
+@mixin easeOut {
+  // essentially a mixin is essentially a function that can be called
+  // The code effectively gets inserted where the mixin is used
+  transition: all 0.7s ease-out;
+}
+@mixin background {
+  @if $show-home-image {
+    &#bg-image {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+      // .overlay { //instead of a class can change to a pseudo-element
+      &:after {
+        content: ""; //content required for befor or after pseudoelements
+        z-index: -1;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        // in SASS can wrap the color in rgba(color,opacity) to add transparency
+        background-color: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
+}
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return $dark-text-color;
+  } @else {
+    @return $light-text-color;
+  }
+}
+
+// Media Query mixins
+@mixin mediaSmall {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaMedium {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaLarge {
+  @media screen and (min-width: 769px) and (max-dwidth: 1170px) {
+    @content;
+  }
+}
+@mixin mediaXlg {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
