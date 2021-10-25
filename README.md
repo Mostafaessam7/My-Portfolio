@@ -6,6 +6,10 @@ I specifically avoided using Bootstrap, React, Angular, Vue, or other templates,
 
 As a future project I may create a portfolio with a backend database that would be accessed via Angular or React. If you search my GitHub repository in the future perhaps it will be around.
 
+## Deployment
+
+**Go to a website** [Click Here](https://mostafa-essam-portfolio.netlify.app/)
+
 ## Summary
 
 - [Project Specifications](#project-specifications)
@@ -43,14 +47,10 @@ All of the following technologies, tools, topics, etc. were used for this projec
 - Git
 - Visual Studio Code (VS Code)
 
-## Deployment
-
-- Web Site 
-
 
 ## Authors
 
-**[Mostafa Essam](https://github.com/Mostafaessam7)** - front end Developer
+**[Mostafa Essam](https://github.com/Mostafaessam7)** - Full Stack Asp .Net Developer
 
 - GitHub: [github.com/Mostafaessam7](https://github.com/Mostafaessam7)
 - LinkedIn: [www.linkedin.com/in/mostafa-essam7/](https://www.linkedin.com/in/mostafa-essam7/)
