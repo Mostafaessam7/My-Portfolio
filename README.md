@@ -45,7 +45,7 @@ All of the following technologies, tools, topics, etc. were used for this projec
 
 ## Deployment
 
-- Web Site **[curtg.netlify.app/](https://curtg.netlify.com/)**
+- Web Site 
 
 
 ## Authors
